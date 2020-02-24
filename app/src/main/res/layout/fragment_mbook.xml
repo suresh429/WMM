@@ -1,11 +1,163 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_10"
+    android:background="@color/backgroundColor">
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/mbook_entry" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <EditText
+            android:id="@+id/etSelectProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="SELECT PROJECT"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/etAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="AGREEMENT N : AGM/123"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/etAgency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="AGENCY NAME/CONTRACTOR : REYU CONSTRUCTION "
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="Location : Hyderabad"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/etSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="Select Date : 18-01-2019"
+            android:inputType="date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+
+        <EditText
+            android:id="@+id/etItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="ITEM NAME"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/etUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10"
+            android:background="@drawable/et_bg"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center_vertical"
+            android:hint="UNITS : CM"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:padding="@dimen/padding_10"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="save and draft" />
+
+
+            <Button
+                android:id="@+id/btnFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="final submit" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>
