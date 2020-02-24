@@ -1,10 +1,12 @@
-package com.example.wmm;
+package com.example.wmm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.wmm.R;
 
 public class SplashActivity extends AppCompatActivity {
 

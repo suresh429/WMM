@@ -3,11 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_home"
-            android:title="@string/home" />
+            android:id="@+id/navigation_mbookentry"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="@string/mbook_entry" />
+
+        <item android:id="@+id/navigation_check"
+            android:icon="@drawable/ic_device_hub_black_24dp"
+            android:title="@string/check_measurement"/>
+
+
+
+        <item android:id="@+id/navigation_measurement"
+            android:icon="@drawable/ic_star_border_black_24dp"
+            android:title="@string/measurement_disputes"/>
+
+
+        <item android:id="@+id/navigation_payment"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="@string/payment_status"/>
+
+
+        <item android:id="@+id/navigation_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="@string/logout"/>
     </group>
+
+
 
 
 

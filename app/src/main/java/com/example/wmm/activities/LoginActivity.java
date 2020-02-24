@@ -1,8 +1,10 @@
-package com.example.wmm;
+package com.example.wmm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.wmm.R;
 
 public class LoginActivity extends AppCompatActivity {
 
