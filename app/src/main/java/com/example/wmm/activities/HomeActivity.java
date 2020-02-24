@@ -20,11 +20,14 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.wmm.R;
 import com.example.wmm.fragments.CheckMeasurementFragment;
+import com.example.wmm.fragments.HomeFragment;
 import com.example.wmm.fragments.MbookEntryFragment;
 import com.example.wmm.fragments.MeasurementDisputesFragment;
 import com.example.wmm.fragments.PaymentStatusFragment;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
 
 
+    final Fragment homeFragment = new HomeFragment();
     final Fragment mbookEntryFragment = new MbookEntryFragment();
     final Fragment checkMeasurementFragment = new CheckMeasurementFragment();
     final Fragment measurementDisputesFragment = new MeasurementDisputesFragment();
@@ -50,7 +54,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
     final FragmentManager fm = getSupportFragmentManager();
-    Fragment active = mbookEntryFragment;
+    Fragment active = homeFragment;
     FragmentTransaction transaction;
 
     @Override
@@ -60,6 +64,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
+
 
         navView.setNavigationItemSelectedListener(this);
 
@@ -71,38 +76,46 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         transaction = getSupportFragmentManager().beginTransaction();
 
-        fm.beginTransaction().replace(R.id.main_container, paymentStatusFragment, "4").hide(paymentStatusFragment).commit();
-        fm.beginTransaction().replace(R.id.main_container, measurementDisputesFragment, "3").hide(measurementDisputesFragment).commit();
-        fm.beginTransaction().replace(R.id.main_container, checkMeasurementFragment, "2").hide(checkMeasurementFragment).commit();
-        fm.beginTransaction().replace(R.id.main_container, mbookEntryFragment, "1").commit();
+        fm.beginTransaction().replace(R.id.main_container, paymentStatusFragment, "5").hide(paymentStatusFragment).commit();
+        fm.beginTransaction().replace(R.id.main_container, measurementDisputesFragment, "4").hide(measurementDisputesFragment).commit();
+        fm.beginTransaction().replace(R.id.main_container, checkMeasurementFragment, "3").hide(checkMeasurementFragment).commit();
+        fm.beginTransaction().replace(R.id.main_container, mbookEntryFragment, "2").hide(mbookEntryFragment).commit();
+        fm.beginTransaction().replace(R.id.main_container, homeFragment, "1").commit();
+
+
     }
+
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.navigation_mbookentry) {
+        if (id == R.id.navigation_home) {
             toolbar.setTitle(getResources().getString(R.string.home));
-            fm.beginTransaction().replace(R.id.main_container, mbookEntryFragment, "1").commit();
+            fm.beginTransaction().replace(R.id.main_container, homeFragment, "1").commit();
+            transaction.addToBackStack(null);
+            active = homeFragment;
+        } else if (id == R.id.navigation_mbookentry) {
+            toolbar.setTitle(getResources().getString(R.string.mbook_entry));
+            fm.beginTransaction().replace(R.id.main_container, mbookEntryFragment, "2").commit();
             transaction.addToBackStack(null);
             active = mbookEntryFragment;
         } else if (id == R.id.navigation_check) {
             toolbar.setTitle(getResources().getString(R.string.check_measurement));
-            fm.beginTransaction().replace(R.id.main_container, checkMeasurementFragment, "2").commit();
+            fm.beginTransaction().replace(R.id.main_container, checkMeasurementFragment, "3").commit();
             transaction.addToBackStack(null);
             active = checkMeasurementFragment;
 
         } else if (id == R.id.navigation_measurement) {
             toolbar.setTitle(getResources().getString(R.string.measurement_disputes));
-            fm.beginTransaction().replace(R.id.main_container, measurementDisputesFragment, "3").commit();
+            fm.beginTransaction().replace(R.id.main_container, measurementDisputesFragment, "4").commit();
             transaction.addToBackStack(null);
             active = measurementDisputesFragment;
 
         } else if (id == R.id.navigation_payment) {
             toolbar.setTitle(getResources().getString(R.string.payment_status));
-            fm.beginTransaction().replace(R.id.main_container, paymentStatusFragment, "4").commit();
+            fm.beginTransaction().replace(R.id.main_container, paymentStatusFragment, "5").commit();
             transaction.addToBackStack(null);
             active = paymentStatusFragment;
 

@@ -1,4 +1,4 @@
-package com.example.wmm;
+package com.example.wmm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.wmm.R;
+import com.example.wmm.activities.LoginActivity;
 
 public class SplashActivity extends Activity {
 
@@ -24,7 +27,7 @@ public class SplashActivity extends Activity {
         }
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         },3000);

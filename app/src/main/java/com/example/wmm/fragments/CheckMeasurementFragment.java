@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.example.wmm.R;
+import com.example.wmm.activities.MainActivity;
+
+import java.util.Objects;
 
 
 /**
@@ -16,7 +19,7 @@ import com.example.wmm.R;
  */
 public class CheckMeasurementFragment extends Fragment {
 
-
+    View rootView;
     public CheckMeasurementFragment() {
         // Required empty public constructor
     }
@@ -26,7 +29,10 @@ public class CheckMeasurementFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_check, container, false);
+        View view = inflater.inflate(R.layout.fragment_check, container, false);
+
+        return  view;
     }
+
 
 }

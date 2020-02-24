@@ -17,15 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/home"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/home"
+            app:titleTextColor="@color/backgroundColor">
 
         </androidx.appcompat.widget.Toolbar>
 
