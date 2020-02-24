@@ -10,4 +10,5 @@
     <string name="measurement_disputes">Measurement Disputes</string>
     <string name="payment_status">Payment Status</string>
     <string name="logout">Logout</string>
+    <string name="work_statistics">Work Statistics</string>
 </resources>

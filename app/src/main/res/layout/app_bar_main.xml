@@ -46,7 +46,6 @@
         android:layout_below="@+id/appbar"
         android:layout_above="@+id/nav_view"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:padding="1dp"
         android:id="@+id/main_container"/>
 
 
