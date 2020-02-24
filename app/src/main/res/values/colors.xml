@@ -585,5 +585,6 @@
     <color name="gray4">#aaaaaa</color>
     <color name="gray5">#ebebeb</color>
     <color name="gray_light">#e7e7e7</color>
+    <color name="backgroundColor">#1A1E23</color>
 </resources>
 
