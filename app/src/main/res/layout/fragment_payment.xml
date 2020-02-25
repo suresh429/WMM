@@ -1,11 +1,232 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingTop="@dimen/padding_10"
+    tools:ignore="Autofill,LabelFor,SmallSp,ButtonStyle">
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/payment_status" />
+        android:background="@color/backgroundColor"
+        android:paddingTop="@dimen/padding_10">
+        <!-- TODO: Update blank fragment layout -->
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <EditText
+                android:id="@+id/etSelectProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/select_project"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAgreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/agreement_n_agm_123"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAgency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/agency_name_contractor_reyu_construction"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/location_hyderabad"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="BILLING ID"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="AMOUNT"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="STATUS"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/quantum_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_001"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                         />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_25000"
+                        android:background="@color/white"
+                        android:textColor="@color/black" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/pending"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/black" />
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_002"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/_50000"
+                        android:background="@color/white"
+                        android:textColor="@color/black" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/approved"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/black" />
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

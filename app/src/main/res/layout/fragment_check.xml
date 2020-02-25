@@ -1,11 +1,306 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingTop="@dimen/padding_10"
+    tools:ignore="Autofill,LabelFor,SmallSp">
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/check_measurement" />
+        android:background="@color/backgroundColor"
+        android:paddingTop="@dimen/padding_10">
+        <!-- TODO: Update blank fragment layout -->
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <EditText
+                android:id="@+id/etSelectProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/select_project"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAgreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/agreement_n_agm_123"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAgency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/agency_name_contractor_reyu_construction"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/location_hyderabad"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etSelectDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:drawableEnd="@drawable/ic_date_range_black_24dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/select_date_18_01_2019"
+                android:inputType="date"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/etItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/et_bg"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:hint="@string/item_name"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/no"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/length"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/breath"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/depth"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/qty"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/select_all"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:buttonTint="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/quantum_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drop"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drop"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drop"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drop"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drop"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black" />
+
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/edit"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:buttonTint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/remarks"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/drop"
+                android:inputType="text"
+                android:maxLines="5"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center"
+                android:padding="@dimen/padding_10"
+                android:text="@string/final_submit" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>
