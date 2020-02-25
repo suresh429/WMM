@@ -270,14 +270,14 @@
                         android:textColor="@color/black" />
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
+                        android:textSize="10sp"
                         android:background="@color/red"
                         android:drawableStart="@drawable/ic_photo_library_black_24dp"
                         android:drawablePadding="@dimen/padding_10"
-                        android:padding="@dimen/padding_10"
                         android:text="@string/select_files"
                         android:textColor="@color/white" />
 
