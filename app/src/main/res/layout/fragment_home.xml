@@ -255,7 +255,7 @@
                         <View
                             android:layout_width="10dp"
                             android:layout_height="10dp"
-                            android:background="#494747"/>
+                            android:background="#7F7C7C"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -362,6 +362,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:padding="10dp"
                             android:src="@drawable/ic_bookentry"
                             android:background="@color/white"
                             />
@@ -396,6 +397,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:padding="10dp"
                             android:src="@drawable/ic_measurments"
                             android:background="@color/white"
                             />
@@ -438,6 +440,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:padding="10dp"
                             android:src="@drawable/ic_research"
                             android:background="@color/white"
                             />
@@ -473,6 +476,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:padding="10dp"
                             android:background="@color/white"
                             android:src="@drawable/ic_payment"
                             />
