@@ -70,14 +70,14 @@ public class HomeFragment extends Fragment {
         txtPercentage.setText("75%");
 
 
-        BarDataSet bardataset = new BarDataSet(getData(), "No Of Employee");
+        BarDataSet bardataset = new BarDataSet(getData(), "");
         chart.animateY(5000);
         BarData data = new BarData(bardataset);
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
        // bardataset.setBarBorderWidth(10f);
        // bardataset.setBarBorderColor(Color.parseColor("#FA9611"));
         bardataset.setValueTextColor(Color.WHITE);
-        bardataset.setHighLightColor(Color.WHITE);
+        bardataset.setValueTextSize(14f);
         chart.setData(data);
 
         return view;
@@ -87,9 +87,9 @@ public class HomeFragment extends Fragment {
         ArrayList<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry (1, 5));
         entries.add(new BarEntry (3, 7));
-        entries.add(new BarEntry (5,3));
-        entries.add(new BarEntry (7,4));
-        entries.add(new BarEntry (9,1));
+        entries.add(new BarEntry (0,0));
+        entries.add(new BarEntry (0,0));
+        entries.add(new BarEntry (0,0));
         return entries;
     }
 }
